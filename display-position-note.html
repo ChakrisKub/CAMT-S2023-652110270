@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone web</title>
+    <style>
+        p{
+            margin: 0px;
+        }
+        .block{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div class="Box-model" style="margin: 20px;">
+        <h1>Box Model</h1>
+    <div style="
+        border: 1px dotted black;
+        background-color: rgb(241, 241, 241);
+        padding: 20px;
+        ">
+        <div style="
+            background-color: pink;
+            padding: 20px;
+            ">
+            <div style="
+                background-color: red;
+                padding: 20px;
+                ">
+                <div style="
+                    background-color: yellow;
+                    padding: 20px;
+                "
+                >
+                    <div style="
+                        background-color: green;
+                    ">Simple Box</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <h1>CSS Display</h1>
+
+    <h2>inline</h2>
+    <div class="CSS-Display1" >
+        <div style="
+            border: 1px dotted black;
+            padding: 20px;
+
+        ">
+        
+            <div class="inline" style="
+                margin: 0px;
+                
+            "
+            >
+                <p style="
+                    background-color: yellow; 
+                    padding: 0px 20px 0px 20px;
+                    display: inline;
+                ">inline text1</p>
+                <p style="
+                    background-color: orange;
+                    padding: 0px 20px 0px 20px;
+                    display: inline;
+                ">inline text2</p>
+                <p style="
+                    background-color: red;
+                    padding: 0px 20px 0px 20px;  
+                    display: inline;
+                ">inline text3</p>
+                <p style="
+                    background-color: green;
+                    padding: 0px 20px 0px 20px;
+                    display: inline;
+                ">inline text4</p>
+                <p style="
+                    background-color: purple;
+                    padding: 0px 20px 0px 20px;
+                    display: inline;
+                ">inline text5</p>
+            </div>
+        </div>
+    </div>
+
+
+    <h2>block</h2>
+        <div style="
+            border: 1px dotted black;
+            padding: 20px;
+    
+        ">
+            <div class="block">
+                <p style="background-color: yellow; display: block;">inline text1</p>
+                <p style="background-color: orange; display: block;">inline text2</p>
+                <p style="background-color: red; display: block;">inline text3</p>
+                <p style="background-color: green; display: block;">inline text4</p>
+                <p style="background-color: purple; display: block;">inline text5</p>
+            </div>
+
+        </div>
+    
+    
+    <h2>inline-block</h2>
+    <div 
+        class="hidden"
+    >
+            <p>apple</p>
+            <p>orange</p>
+            <p>mango</p>
+            <p>watermelon</p>
+    </div>
+
+
+    <h2>none</h2>
+    <div 
+        class="none"
+    >
+            <p>apple</p>
+            <p>orange</p>
+            <p style="display:none;">mango</p>
+            <p>watermelon</p>
+    </div>
+
+
+    <h2>display:none vs visibility:hidden</h2>
+    <div 
+        class="hidden"
+    >
+            <p>apple</p>
+            <p>orange</p>
+            <p style="visibility:hidden;">mango</p>
+            <p>watermelon</p>
+    </div>
+
+    <h1>CSS Position</h1>
+    <h2>static</h2>
+    <div 
+        class="static"
+        style="
+            border: 1px dotted black;
+            background-color: aquamarine;
+            padding: 15px;
+        "
+    >
+        <div 
+            class="block-static"
+            style="
+                position: static;
+                height: 100px;
+                width: 100px;
+                background-color: pink;
+            "    
+        >
+        </div>
+    </div>
+
+    <h2>absolute</h2>
+    <h3>fixed width/height</h3>
+    <div 
+        class="absolute"
+        style="
+            border: 1px dotted black;
+            background-color: aquamarine;
+            padding: 15px;
+        "    
+    >
+        <div 
+            class="fixed-width/height"
+            style="position: absolute;
+                height: 100px;
+                width: 100px;
+                background-color: pink;
+            "    
+        >
+
+        </div>
+    </div>
+
+    <h3>no width/height</h3>
+    <div 
+        class="absolute"
+        style="
+            border: 1px dotted black;
+            background-color: aquamarine;
+            padding: 15px;
+        "    
+    >
+        <div 
+            class="fixed-width/height"
+            style="
+                position: absolute;
+                background-color: pink;
+                border: 1px solid red;
+                width: 100%;
+            "    
+        >
+
+        </div>
+    </div>
+
+    <h3>fixed width/height + right/top</h3>
+    <div 
+        class="fixed-width/height+right/top"
+        style="
+            border: 1px dotted black;
+            background-color: aquamarine;
+            padding: 15px;
+        "
+    >
+        <div 
+            style="
+                border: 1px solid black;
+                background-color: antiquewhite;
+                height: 100px;
+                width: 100%;
+            "
+        >
+            <div 
+                class="close-bottom"
+                style="
+                    position: absolute;
+                    right: 22.5px;
+                    border: 1px solid black;
+                    width: 20px;
+                    height: 20px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: rgba(65, 61, 61, 0.6);
+                "    
+            >X
+            </div>
+        </div>
+
+    </div>
+
+    <div 
+        class="ads-Songkran"
+        style="
+            position: fixed;
+            background-color: rgb(0, 0, 0, 0.6);
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        "
+    >
+    <div 
+        style="
+            position: absolute;
+            top: 30%;
+            right: 12%;
+            background-color: aliceblue;
+            text-align: center;
+            font-size: 48px;
+            color: plum;
+            width: 75%;
+            height: 15%;
+            padding: 10px;
+        "
+    >
+        <p>Songkran Festival<br>2023</p>
+    </div>
+
+    </div>
+</body>
+</html>
