@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokdeng.com</title>
+    <style>
+        body{
+            background-color: rgb(17, 69, 17);
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            position: absolute;
+            top: 20%;
+            left: 15%;
+            width: 70%;
+            height: 450px;
+            border: 1px solid black;
+            background-image: linear-gradient(to bottom right, rgb(0, 98, 8), rgb(22, 148, 0), rgb(0, 98, 8));
+            border-radius: 10px;
+            
+        }
+        .box-card{
+            display: flex;
+            justify-items: center;
+            transform: translateY(40%);
+        }
+        .card{
+            height: 200px;
+            width: 150px;
+            background-color: aliceblue;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px 5px rgb(0, 0, 0, 0.4);
+
+        }
+        .red{
+            color: red;
+            border-color: red;
+        }
+        .type-card{
+            display: flex;
+            flex-direction: column;
+            font-size: 48px;
+            margin: 30px;
+            text-align: center;
+
+        }
+        .number-card{
+            padding: 5px;
+            font-size: 24px;
+            text-align: right;
+        }
+
+        .box-button{
+            position: absolute;
+            bottom: 20%;
+            left: 15%;
+            width: 70.15%;
+            height: 50px;
+            
+        }
+        .button{
+            padding: 10px 0;
+            border: 1px solid black;
+            font-size: 24px;
+            width: 100%;
+            background-color: antiquewhite;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        function onClickRandomButton(){
+            var card = document.getElementsByClassName('card')
+
+            for(index = 0; index < card.length; index++){
+            // how to use random function
+            var cardElm = card[index]
+
+            var cardType = CARD_TYPE[random(CARD_TYPE.length)]
+            var cardNumber = CARD_NUMBER[random(CARD_NUMBER.length)]
+            console.log(cardType, cardNumber)
+            
+            //Change type of card
+            var displayTypeElm = cardElm.getElementsByClassName('type-card')[0]
+            displayTypeElm.innerText = cardType
+
+            //Change number of card
+            var displayNumberElm = cardElm.getElementsByClassName('number-card')[0]
+            displayNumberElm.innerText = cardNumber
+
+                //condition for change color diamond and heart
+                if(cardType === '♦' || cardType === '♥'){
+                    cardElm.classList.add('red')
+                }else{
+                    cardElm.classList.remove('red')
+                }
+            
+            }
+        }
+
+        // card number and type
+        var CARD_TYPE = ['♣', '♦', '♥', '♠']
+        var CARD_NUMBER = ['A', '2', '3', '4', '5', '6','7', '8', '9', '10', 'J', 'Q', 'K']
+
+        // random function
+        // max: number > 0
+        // return [0, max -1]
+        function random(max) {
+            return parseInt(Math.random() * max) % max
+        }
+
+        
+
+    </script>
+    <div class="container">
+        <div class="box-card">
+            <div class="card">
+                <div class="number-card">8</div>
+                <div class="type-card">♣</div>
+                
+            </div>
+            <div class="card">
+                <div class="number-card">5</div>
+                <div class="type-card">♥</div>
+                
+            </div>
+            <div class="card">
+                <div class="number-card">K</div>
+                <div class="type-card">♣</div>
+                
+            </div>
+            <div class="card">
+                <div class="number-card">10</div>
+                <div class="type-card">♦</div>
+                
+            </div>
+            <div class="card">
+                <div class="number-card">A</div>
+                <div class="type-card">♠</div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+    <div class="box-button">
+            <button class="button" onclick="onClickRandomButton()">Click to Random</button>
+    </div>
+
+    
+</body>
+</html>
